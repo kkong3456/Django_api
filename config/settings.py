@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import db_setttings
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,8 +25,13 @@ SECRET_KEY = 'django-insecure-oi*#&dzw*554tir95li3nhf(hbcc*wlhu0$9gol&wjm+e3du#s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 # ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = ['*']
+=======
+ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = ['172.30.1.44']
+>>>>>>> 64a83971a4e01ff05a15cd2ea20fb2d7d58faf91
 
 # Application definition
 
@@ -127,7 +131,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'}
 
 CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ORIGIN_WHITELIST = (
-#     'http://localhost:8080',
-#     'http://127.0.0.1:8080',
-# )
+#CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8080',
+    'http://127.0.0.1:8080',
+
+)
