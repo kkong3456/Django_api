@@ -20,9 +20,9 @@ from rest_framework.authtoken import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/doc/',get_swagger_view(title="Booking API Menual")),
-    path('api/get_token/',views.obtain_auth_token),
-    path('',include('RSAI.urls')),
-    path('',include('booking.urls')),
+    path('api/doc/', get_swagger_view(title="Booking API Menual")),
+    path('api/get_token/', views.obtain_auth_token),
+    path('', include('RSAI.urls')),
+    path('', include('booking.urls')),
 
 ]

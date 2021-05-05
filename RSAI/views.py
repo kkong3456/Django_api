@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import generics
-from RSAI.models import JisaNetIncrease, BonbuNetIncrease
+from .models import JisaNetIncrease, BonbuNetIncrease
 from .serializers import JisaNetIncreaseSerializer,BonbuNetIncreaseSerializer
 
 
