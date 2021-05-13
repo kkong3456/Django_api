@@ -43,3 +43,25 @@ class BonbuNetIncrease(models.Model):
     class Meta:
         ordering = ['date']
         db_table = 'bonbu_net_increase'
+
+
+
+class RsaiJojik(models.Model):
+    id=models.IntegerField(primary_key=True)
+    sysdate=models.DateField()
+    product=models.CharField(max_length=10)
+    jojik=models.CharField(max_length=10)
+    this_hj_count=models.IntegerField()
+    this_hj_ratio=models.FloatField()
+    that_hj_count=models.IntegerField()
+    that_hj_ratio=models.FloatField()
+    up_ratio=models.FloatField()
+    rank=models.FloatField()
+
+    def __str__(self):
+        return self.jojik+'의 쓴맛 단맛'
+
+    class Meta:
+        ordering=['id']
+        db_table='rsai_jojik'
+

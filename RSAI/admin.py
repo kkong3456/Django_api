@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import JisaNetIncrease, BonbuNetIncrease
+from .models import JisaNetIncrease, BonbuNetIncrease,RsaiJojik
 
 
 # Register your models here.
@@ -18,6 +18,10 @@ class BonbuNetIncreaseAdmin(admin.ModelAdmin):
     # list_display = ['id']
     # list_editable = []
 
+class RsaiJojikAdmin(admin.ModelAdmin):
+    list_display=['id','sysdate','product','jojik','this_hj_count','this_hj_ratio','that_hj_count','that_hj_ratio','up_ratio','rank']
+
 
 admin.site.register(JisaNetIncrease, JisaNetIncreaseAdmin)
 admin.site.register(BonbuNetIncrease, BonbuNetIncreaseAdmin)
+admin.site.register(RsaiJojik,RsaiJojikAdmin)

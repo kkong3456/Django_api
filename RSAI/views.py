@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .models import JisaNetIncrease, BonbuNetIncrease
-from .serializers import JisaNetIncreaseSerializer,BonbuNetIncreaseSerializer
+from .models import JisaNetIncrease, BonbuNetIncrease,RsaiJojik
+from .serializers import JisaNetIncreaseSerializer,BonbuNetIncreaseSerializer,RsaiJojikSerializer
 
 
 class JisaNetIncreaseList(generics.ListCreateAPIView):
@@ -22,3 +22,7 @@ class BonbuNetIncreaseList(generics.ListCreateAPIView):
 class BonbuNetIncreaseDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = BonbuNetIncrease.objects.all()
     serializer_class = BonbuNetIncreaseSerializer
+
+class RsaiJojikList(generics.ListCreateAPIView):
+    queryset=RsaiJojik.objects.all()
+    serializer_class = RsaiJojikSerializer
